@@ -249,69 +249,52 @@ html, body{
     
 }
 
-
-/** rwd **/
-
-@media screen and (max-width: 600px){
-    html body{
-        overflow: scroll;
-    }
+/* rwd 800px*/
+@media screen and (max-width: 800px){
     .container{
         display: grid;
-        grid-template-columns:repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,auto);
+        grid-template-areas: 
+        "logo navbar"
+        "search search"
+        "konten konten"
+        "fot1 fot2"
+        "fot3 fot3";
+    }
+    .navbar a{
+        font-size: 17px;
+    }
+    .konten{
+        height: 750px;
+    }
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,auto);
+    }
+}
+
+/* rwd 600px */
+@media screen and (max-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(7,auto);
         grid-template-areas: 
         "logo"
         "navbar"
         "search"
         "konten"
-        "fot1" 
-        "fot2" 
+        "fot1"
+        "fot2"
         "fot3";
     }
     .konten{
-        height: 1400px;
+        height: 750px;
     }
     .card{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 30px;
-        position: relative;
-        align-items: center;
-        
-    }
-    .maincard h2,p{
-        font-size: 6px;
-    }
-}
-
-@media screen and (max-width: 800px){
-    html body{
-        overflow: scroll;
-    }
-    .container{
-        display: grid;
-        grid-template-columns:repeat(1,1fr);
-        grid-template-rows: repeat(5,auto);
-        grid-template-areas: 
-        "logo navbar"
-        "search"
-        "konten"
-        "fot1 fot2" 
-        "fot3";
-    }
-    .konten{
-        height: 700px;
-    }
-    .card{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 30px;
-        position: relative;
-        align-items: center;
-        
-    }
-    .maincard h2,p{
-        font-size: 10px;
+        grid-template-columns: repeat(2,280px);
     }
 }

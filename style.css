@@ -29,7 +29,6 @@ html, body{
 .logo{
     grid-area: logo;
     background-color: #01257D;
-    box-shadow: 0px 0px 30px 1px black;
 }
 .logo h1{
     position: relative;
